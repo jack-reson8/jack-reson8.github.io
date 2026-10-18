@@ -11,7 +11,7 @@
 <p><a id="pro" href="https://buy.stripe.com/5kQ00j1Thg6GfCVbWEdnW00">升级 Pro：批量处理，解除 20 行限制（HK$39 / 30 天）</a></p>
 <h2>怎么用</h2><ol><li>把内容粘贴到上面的输入框，或点“载入示例”。</li><li>点“计算 / 转换”。</li><li>点“复制结果”带走即可。</li></ol><p>输入格式：格式：本金,年利率%,年数。等额本息月供与总利息。</p>
 <h2>常见问题</h2><h3>车贷月供计算适合谁用？</h3><p>主要面向购车，但任何需要同样计算的人都可以使用。</p><h3>数据会上传到服务器吗？</h3><p>不会。贷款月供计算器的所有计算都在你的浏览器里完成，输入的内容不会被发送或保存。</p><h3>免费版有什么限制？</h3><p>免费版每次最多处理 20 行输入，足够日常使用；需要批量处理时可以升级 Pro。</p><h3>结果准确吗？</h3><p>结果按公开通用的公式计算，仅供参考；涉及合同、税务、医疗、学籍等正式用途，请以官方或专业人士意见为准。</p>
-<h2>相关工具</h2><ul><li><a href="/loan-payment/">贷款月供计算器</a></li><li><a href="/loan-payment/mortgage-monthly-payment/">房贷月供计算器</a></li><li><a href="/loan-payment/student-loan-payment/">学生贷款月供估算</a></li><li><a href="/base64/">Base64 编码解码</a></li><li><a href="/discount-calc/">折扣与折后价计算器</a></li><li><a href="/email-extract/">邮箱与链接提取器</a></li><li><a href="/team-splitter/">随机分组工具</a></li></ul>
+<h2>相关工具</h2><ul><li><a href="/loan-payment/">贷款月供计算器</a></li><li><a href="/loan-payment/mortgage-monthly-payment/">房贷月供计算器</a></li><li><a href="/loan-payment/student-loan-payment/">学生贷款月供估算</a></li><li><a href="/base64/">Base64 编码解码</a></li><li><a href="/recipe-scaler/">食谱份量换算</a></li><li><a href="/trip-fuel-cost/">行程油费计算器</a></li><li><a href="/weight-convert/">重量单位换算</a></li></ul>
 <footer><p><a href="/">全部工具</a></p></footer>
 <script>const num=(s)=>s.split(/[,\s]+/).filter(Boolean).map(Number);
 const run0=(s) => { const [p, r, y] = num(s); if (!(p > 0) || !(r >= 0) || !(y > 0)) return "格式：本金,年利率%,年数"; const n = y * 12, i = r / 1200; const m = i ? p * i / (1 - Math.pow(1 + i, -n)) : p / n; return "月供 " + m.toFixed(2) + "\n总还款 " + (m * n).toFixed(2) + "\n总利息 " + (m * n - p).toFixed(2); };

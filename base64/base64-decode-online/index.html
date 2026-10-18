@@ -11,7 +11,7 @@
 <p><a id="pro" href="https://buy.stripe.com/5kQ00j1Thg6GfCVbWEdnW00">升级 Pro：批量处理，解除 20 行限制（HK$39 / 30 天）</a></p>
 <h2>怎么用</h2><ol><li>把内容粘贴到上面的输入框，或点“载入示例”。</li><li>点“计算 / 转换”。</li><li>点“复制结果”带走即可。</li></ol><p>输入格式：输入文本编码为 Base64；以 decode: 开头则解码。支持中文。</p>
 <h2>常见问题</h2><h3>Base64 在线解码适合谁用？</h3><p>主要面向安全/运维，但任何需要同样计算的人都可以使用。</p><h3>数据会上传到服务器吗？</h3><p>不会。Base64 编码解码的所有计算都在你的浏览器里完成，输入的内容不会被发送或保存。</p><h3>免费版有什么限制？</h3><p>免费版每次最多处理 20 行输入，足够日常使用；需要批量处理时可以升级 Pro。</p><h3>结果准确吗？</h3><p>结果按公开通用的公式计算，仅供参考；涉及合同、税务、医疗、学籍等正式用途，请以官方或专业人士意见为准。</p>
-<h2>相关工具</h2><ul><li><a href="/base64/">Base64 编码解码</a></li><li><a href="/base64/base64-encode-chinese/">Base64 中文编码</a></li><li><a href="/base64/basic-auth-header-encoder/">HTTP Basic 认证头编码</a></li><li><a href="/csv-json/">CSV ⇄ JSON 转换器</a></li><li><a href="/age-calc/">年龄计算器</a></li><li><a href="/slug-gen/">URL Slug 生成器</a></li><li><a href="/tip-split/">账单分摊与小费计算</a></li></ul>
+<h2>相关工具</h2><ul><li><a href="/base64/">Base64 编码解码</a></li><li><a href="/base64/base64-encode-chinese/">Base64 中文编码</a></li><li><a href="/base64/basic-auth-header-encoder/">HTTP Basic 认证头编码</a></li><li><a href="/csv-json/">CSV ⇄ JSON 转换器</a></li><li><a href="/age-calc/">年龄计算器</a></li><li><a href="/slug-gen/">URL Slug 生成器</a></li><li><a href="/vat-calc/">增值税 / 含税价计算</a></li></ul>
 <footer><p><a href="/">全部工具</a></p></footer>
 <script>const num=(s)=>s.split(/[,\s]+/).filter(Boolean).map(Number);
 const run0=(s) => { const dec = s.startsWith("decode:"); if (dec) return decodeURIComponent(escape(atob(s.slice(7).trim()))); return btoa(unescape(encodeURIComponent(s))); };
