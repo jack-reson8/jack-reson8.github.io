@@ -1,0 +1,222 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Bulk PDF Generator from Excel or CSV – Pay per Batch</title><meta name="description" content="Turn every row of an Excel or CSV file into its own PDF: certificates, badges, letters or labels. Design once, generate hundreds. No subscription, files never leave your device."><link rel="canonical" href="https://jack-reson8.github.io/bulk-pdf-generator/">
+<meta property="og:title" content="Bulk PDF Generator from Excel or CSV – Pay per Batch"><meta property="og:description" content="Turn every row of an Excel or CSV file into its own PDF: certificates, badges, letters or labels. Design once, generate hundreds. No subscription, files never leave your device."><meta property="og:url" content="https://jack-reson8.github.io/bulk-pdf-generator/"><meta property="og:type" content="website"><script type="application/ld+json">[{"@context":"https://schema.org","@type":"SoftwareApplication","name":"ToolKB Bulk PDF Generator from Excel","description":"Turn every row of an Excel or CSV file into its own PDF: certificates, badges, letters or labels. Design once, generate hundreds. No subscription, files never leave your device.","url":"https://jack-reson8.github.io/bulk-pdf-generator/","applicationCategory":"BusinessApplication","operatingSystem":"Web browser","offers":[{"@type":"Offer","price":"0","priceCurrency":"USD","description":"Free preview: first 10 rows with watermark"},{"@type":"Offer","price":"2.99","priceCurrency":"USD","description":"One batch, unlimited rows, no watermark"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Are my files uploaded anywhere?","acceptedAnswer":{"@type":"Answer","text":"No. Your spreadsheet and background are read and turned into PDFs inside your browser. Nothing is sent to a server, which matters for student and employee lists."}},{"@type":"Question","name":"Which spreadsheet formats work?","acceptedAnswer":{"@type":"Answer","text":"Excel (.xlsx, .xls), CSV and OpenDocument (.ods). The first row is treated as column names."}},{"@type":"Question","name":"Can I use my own certificate design?","acceptedAnswer":{"@type":"Answer","text":"Yes. Export your design (from Canva, Word, Illustrator…) as a PNG or JPG, upload it as the background, then drag the name and other fields into place."}},{"@type":"Question","name":"Do non-English names work?","acceptedAnswer":{"@type":"Answer","text":"Yes. Text is rendered with your system fonts, so Chinese, Japanese, accents and other scripts appear correctly."}},{"@type":"Question","name":"How is this different from Canva Bulk Create?","acceptedAnswer":{"@type":"Answer","text":"No Pro subscription, no 300-row cap, and your data never leaves your device. You pay only for the batches you actually need."}}]}]</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7881768104616342" crossorigin="anonymous"></script><style>:root{--ink:#0f172a;--mut:#64748b;--line:#e2e8f0;--bg:#f8fafc;--acc:#4f46e5;--acc2:#7c3aed;--ok:#059669}
+*{box-sizing:border-box}body{margin:0;font:16px/1.6 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC",sans-serif;color:var(--ink);background:var(--bg)}
+a{color:var(--acc)}.nav{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.85);backdrop-filter:saturate(1.6) blur(10px);border-bottom:1px solid var(--line)}
+.nav div{max-width:1120px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;font-size:20px;letter-spacing:-.02em;color:var(--ink);text-decoration:none}
+.brand b{background:linear-gradient(135deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}.pill{font-size:12px;color:var(--mut);border:1px solid var(--line);border-radius:99px;padding:4px 10px;background:#fff}
+.hero{max-width:1120px;margin:0 auto;padding:40px 20px 18px}.hero h1{font-size:clamp(30px,4vw,46px);line-height:1.1;letter-spacing:-.03em;margin:0 0 12px}.hero p{font-size:18px;color:var(--mut);max-width:720px;margin:0}
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.badges span{font-size:13px;background:#eef2ff;color:#3730a3;border-radius:99px;padding:5px 12px}
+.app{max-width:1120px;margin:0 auto;padding:10px 20px 40px;display:grid;grid-template-columns:380px 1fr;gap:20px;align-items:start}@media(max-width:900px){.app{grid-template-columns:1fr}}
+.panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 1px 2px rgba(15,23,42,.04),0 8px 24px rgba(15,23,42,.04)}.panel+.panel{margin-top:14px}
+.step{display:flex;align-items:center;gap:10px;font-weight:700;margin:0 0 12px}.step i{font-style:normal;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:#fff;font-size:13px}
+.drop{border:2px dashed #cbd5e1;border-radius:14px;padding:22px;text-align:center;position:relative;background:#fafbff;transition:.15s}.drop.on{border-color:var(--acc);background:#eef2ff}.drop input{position:absolute;inset:0;opacity:0;cursor:pointer}.drop p{margin:0;color:var(--mut);font-size:14px}.drop b{display:block;color:var(--ink);font-size:15px}
+.small{font-size:13px;color:var(--mut)}button,select,input{font:inherit}button{cursor:pointer}.btn{border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 12px;font-size:14px}.btn.pri{background:var(--ink);border-color:var(--ink);color:#fff;font-weight:600;padding:12px 16px;width:100%}.btn.pri:disabled{opacity:.5}
+.tpls{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.tpls button{border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 4px;font-size:13px}.tpls button.on{border-color:var(--acc);box-shadow:0 0 0 3px rgba(79,70,229,.15)}
+label.l{display:block;font-size:13px;font-weight:600;margin:12px 0 6px}select.f,input.f{width:100%;padding:9px 10px;border:1px solid #cbd5e1;border-radius:10px;background:#fff}
+.fld{padding:8px;border:1px solid var(--line);border-radius:12px;margin-bottom:8px;cursor:pointer}.fld>select,.fld>input{width:100%;margin-bottom:6px}.fld .ctl{display:grid;grid-template-columns:1fr 54px 36px 76px 30px 30px;gap:6px}.fld.on{border-color:var(--acc);background:#f5f7ff}
+.fld select,.fld input{padding:6px;border:1px solid #cbd5e1;border-radius:8px;min-width:0;font-size:13px;background:#fff}.fld input[type=color]{padding:2px;height:32px}.fld button{border:1px solid #cbd5e1;border-radius:8px;background:#fff;font-size:13px}.fld button.b.on{background:var(--ink);color:#fff}
+.stage{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;position:sticky;top:70px}.canvasWrap{width:100%;border-radius:8px;overflow:hidden;box-shadow:0 10px 30px rgba(15,23,42,.12)}#preview{display:block;cursor:crosshair;touch-action:none}
+.rowbar{display:flex;justify-content:space-between;align-items:center;margin-top:10px;font-size:13px;color:var(--mut)}.msg{margin-top:12px;font-size:14px;padding:10px 12px;border-radius:10px;background:#f1f5f9}.msg.err{background:#fef2f2;color:#991b1b}
+.dl{display:block;margin-top:10px;padding:12px 14px;border-radius:12px;background:#ecfdf5;border:1px solid #a7f3d0;color:#065f46;font-weight:600;text-decoration:none}
+.upsell{margin-top:12px;padding:14px;border-radius:14px;background:linear-gradient(135deg,#eef2ff,#f5f3ff);border:1px solid #c7d2fe}.upsell b{display:block}.upsell a{display:inline-block;margin-top:8px;background:var(--acc);color:#fff;text-decoration:none;padding:9px 14px;border-radius:10px;font-weight:600}
+.content{max-width:820px;margin:0 auto;padding:10px 20px 40px}.content h2{font-size:24px;letter-spacing:-.02em;margin:32px 0 10px}.content h3{font-size:17px;margin:18px 0 4px}.price{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.price div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px}.price b{font-size:26px}
+.uses{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;padding:0;list-style:none}.uses li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px}.uses a{text-decoration:none;font-weight:600}
+footer{border-top:1px solid var(--line);color:var(--mut);font-size:13px;text-align:center;padding:26px}
+input[type=file]::file-selector-button{border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:6px 12px;margin-right:10px;font:inherit;cursor:pointer}input.f[type=file]{padding:7px}
+.fld .ctl>*{width:100%;min-width:0;box-sizing:border-box}
+</style></head><body>
+<header class="nav"><div><a class="brand" href="/">Tool<b>KB</b></a><span class="pill">Pay per job · No subscription · Files stay on your device</span></div></header>
+<section class="hero"><h1>Bulk PDF Generator from Excel</h1><p>Upload a spreadsheet, place the columns on a template, and generate one personalised PDF per row – as a single PDF or a ZIP of separate files.</p><div class="badges"><span>Excel, CSV &amp; ODS</span><span>Your own design or templates</span><span>Any language</span><span>US$2.99 per batch</span></div></section>
+<section class="app"><div>
+ <div class="panel"><p class="step"><i>1</i>Your list</p><div class="drop" id="drop"><input id="file" type="file" accept=".xlsx,.xls,.csv,.ods"><b>Drop your Excel or CSV here</b><p>First row = column names</p></div>
+  <p class="small" id="dataInfo" style="margin:10px 0 0">No file yet. <button class="btn" id="sample" type="button">Try with sample data</button></p></div>
+ <div class="panel" id="step2" hidden><p class="step"><i>2</i>Design</p><div class="tpls"><button type="button" data-tpl="classic" class="on">Classic</button><button type="button" data-tpl="modern" class="">Modern</button><button type="button" data-tpl="badge" class="">Badge</button><button type="button" data-tpl="blank" class="">Blank</button></div>
+  <label class="l" for="bg">Or use your own background (PNG / JPG)</label><input class="f" id="bg" type="file" accept="image/png,image/jpeg">
+  <label class="l" for="size">Page size</label><select class="f" id="size"><option value="a4l">A4 landscape</option><option value="a4p">A4 portrait</option><option value="ltl">US Letter landscape</option><option value="ltp">US Letter portrait</option><option value="img">Match background image</option></select>
+  <label class="l">Fields <span class="small">– click one, then click or drag on the preview to move it</span></label><div id="fields"></div><button class="btn" id="add" type="button">+ Add field</button></div>
+ <div class="panel" id="step3" hidden><p class="step"><i>3</i>Generate</p><label class="l" for="mode">Output</label><select class="f" id="mode"><option value="zip">ZIP – one PDF per row</option><option value="merged">One PDF – one page per row</option></select>
+  <label class="l" for="nameCol">Name files by column</label><select class="f" id="nameCol"></select><p class="small" id="proState"></p><button class="btn pri" id="gen" type="button">Generate</button>
+  <div id="msg" class="msg">Load a list to start.</div><div id="out"></div>
+  <div class="upsell" id="upsell" hidden><b>Export every row without the watermark</b><span class="small">One batch, unlimited rows – US$2.99, pay once. Card, Alipay or WeChat Pay.</span><br><a href="https://buy.stripe.com/bJedR969x07I2Q9f8QdnW01">Unlock this batch – US$2.99</a></div></div>
+</div><div class="stage"><div class="canvasWrap"><canvas id="preview"></canvas></div><div class="rowbar"><button class="btn" id="prev" type="button">← Prev</button><span id="rowLabel">Load a list or try the sample</span><button class="btn" id="next" type="button">Next →</button></div></div></section>
+<section class="content"><h2>Pricing</h2><div class="price"><div><b>Free</b><p>Preview the first 10 rows as real PDFs, with a small watermark. No signup.</p></div><div><b>US$2.99</b><p>One batch: every row, no watermark. Pay once – no subscription, no account.</p></div></div>
+<h2>Popular uses</h2><ul class="uses"><li>Course &amp; training certificates</li><li>Awards and diplomas</li><li>Event name badges</li><li>Personalised letters and invitations</li><li>Product or shelf labels</li><li>Volunteer &amp; attendance certificates</li></ul>
+<h2>How it works</h2><p>1. Upload an Excel, CSV or ODS file – each row becomes one document. 2. Pick a template or upload your own design, then drag the fields where they belong. 3. Generate a ZIP with one PDF per row, or one combined PDF ready to print.</p>
+<h2>FAQ</h2><h3>Are my files uploaded anywhere?</h3><p>No. Your spreadsheet and background are read and turned into PDFs inside your browser. Nothing is sent to a server, which matters for student and employee lists.</p><h3>Which spreadsheet formats work?</h3><p>Excel (.xlsx, .xls), CSV and OpenDocument (.ods). The first row is treated as column names.</p><h3>Can I use my own certificate design?</h3><p>Yes. Export your design (from Canva, Word, Illustrator…) as a PNG or JPG, upload it as the background, then drag the name and other fields into place.</p><h3>Do non-English names work?</h3><p>Yes. Text is rendered with your system fonts, so Chinese, Japanese, accents and other scripts appear correctly.</p><h3>How is this different from Canva Bulk Create?</h3><p>No Pro subscription, no 300-row cap, and your data never leaves your device. You pay only for the batches you actually need.</p>
+<h2>Related</h2><ul class="uses"><li><a href="/bulk-certificate-generator/">Bulk Certificate Generator</a></li><li><a href="/certificate-generator-from-excel/">Certificate Generator from Excel</a></li><li><a href="/name-badge-generator/">Name Badge Generator from a List</a></li></ul></section>
+<footer>ToolKB – professional file tools, pay per job. Everything runs in your browser.</footer>
+<script src="/vendor/xlsx.full.min.js"></script><script src="/vendor/pdf-lib.min.js"></script><script src="/vendor/fflate.min.js"></script>
+<script>// ToolKB bulk PDF generator: spreadsheet rows -> personalised PDF pages. Runs entirely in the browser.
+(function () {
+  const $ = (id) => document.getElementById(id);
+  const FREE_ROWS = 10, PX = 4; // free tier row cap; text raster scale (px per pt)
+  const SIZES = { a4l: [842, 595], a4p: [595, 842], ltl: [792, 612], ltp: [612, 792] };
+  const FONTS = { serif: "Georgia,'Times New Roman','Songti SC',serif", sans: "'Helvetica Neue',Arial,'PingFang SC','Microsoft YaHei',sans-serif", script: "'Snell Roundhand','Brush Script MT','Segoe Script',cursive", mono: "'Courier New',monospace" };
+  const TEMPLATES = {
+    classic: { bg: "#fffdf7", frame: [{ i: 18, w: 6, c: "#1f3a5f" }, { i: 30, w: 1.5, c: "#c9a24b" }], fields: [
+      { kind: "text", text: "Certificate of Completion", x: .5, y: .2, size: 34, font: "serif", color: "#1f3a5f", bold: true },
+      { kind: "text", text: "This certificate is proudly presented to", x: .5, y: .33, size: 14, font: "sans", color: "#555555" },
+      { kind: "col", col: 0, x: .5, y: .47, size: 40, font: "script", color: "#111111" },
+      { kind: "col", col: 1, x: .5, y: .62, size: 16, font: "sans", color: "#333333" },
+      { kind: "col", col: 2, x: .5, y: .8, size: 12, font: "sans", color: "#777777" }] },
+    modern: { bg: "#ffffff", band: "#2f6fed", fields: [
+      { kind: "text", text: "CERTIFICATE", x: .08, y: .22, size: 38, font: "sans", color: "#111827", bold: true, align: "left" },
+      { kind: "text", text: "Awarded to", x: .08, y: .36, size: 14, font: "sans", color: "#6b7280", align: "left" },
+      { kind: "col", col: 0, x: .08, y: .5, size: 42, font: "sans", color: "#2f6fed", bold: true, align: "left" },
+      { kind: "col", col: 1, x: .08, y: .64, size: 16, font: "sans", color: "#374151", align: "left" },
+      { kind: "col", col: 2, x: .08, y: .82, size: 12, font: "sans", color: "#9ca3af", align: "left" }] },
+    badge: { bg: "#ffffff", frame: [{ i: 10, w: 2, c: "#d1d5db" }], top: "#111827", fields: [
+      { kind: "text", text: "HELLO, MY NAME IS", x: .5, y: .13, size: 22, font: "sans", color: "#ffffff", bold: true },
+      { kind: "col", col: 0, x: .5, y: .52, size: 54, font: "sans", color: "#111827", bold: true },
+      { kind: "col", col: 1, x: .5, y: .72, size: 22, font: "sans", color: "#4b5563" }] },
+    blank: { bg: "#ffffff", fields: [{ kind: "col", col: 0, x: .5, y: .5, size: 36, font: "sans", color: "#111111" }] },
+  };
+  const S = { cols: [], rows: [], tpl: "classic", size: "a4l", bgImg: null, bgBytes: null, bgType: "", fields: [], sel: 0, row: 0 };
+  const isPro = () => { try { return Number(localStorage.getItem("pro_until") || 0) > Date.now(); } catch (e) { return false; } };
+  const pageSize = () => (S.size === "img" && S.bgImg ? [842, Math.round(842 * S.bgImg.height / S.bgImg.width)] : SIZES[S.size] || SIZES.a4l);
+  const val = (f, r) => (f.kind === "text" ? f.text : String((S.rows[r] || [])[f.col] == null ? "" : S.rows[r][f.col]));
+  const cssFont = (f, size) => (f.bold ? "700 " : "400 ") + size + "px " + FONTS[f.font];
+
+  // --- data ---------------------------------------------------------------
+  function setData(aoa) {
+    const rows = aoa.filter((r) => r.some((c) => String(c == null ? "" : c).trim() !== ""));
+    if (rows.length < 2) return msg("The file needs a header row and at least one data row.", true);
+    S.cols = rows[0].map((c, i) => String(c || "Column " + (i + 1)).trim());
+    S.rows = rows.slice(1).map((r) => S.cols.map((_, i) => (r[i] == null ? "" : r[i] instanceof Date ? r[i].toLocaleDateString() : String(r[i]))));
+    S.row = 0; S.sample = false; applyTemplate(S.tpl); $("dataInfo").textContent = S.rows.length + " rows · columns: " + S.cols.join(", ");
+    $("step2").hidden = false; $("step3").hidden = false; updateGenerate(); msg("Loaded " + S.rows.length + " rows. Adjust the design, then generate.");
+  }
+  async function readFile(file) {
+    if (!file) return;
+    try {
+      const buf = await file.arrayBuffer();
+      const wb = XLSX.read(buf, { type: "array", cellDates: true });
+      const ws = wb.Sheets[wb.SheetNames[0]];
+      setData(XLSX.utils.sheet_to_json(ws, { header: 1, raw: false, defval: "" }));
+    } catch (e) { msg("Could not read this file: " + e.message, true); }
+  }
+  const SAMPLE = [["Name", "Course", "Date"], ["Ada Lovelace", "Introduction to Programming", "October 19, 2026"], ["Lin Wei", "Data Analysis with Excel", "October 19, 2026"], ["María García", "Public Speaking", "October 19, 2026"], ["Kenji Sato", "Project Management", "October 19, 2026"], ["Amara Okafor", "UX Design Basics", "October 19, 2026"], ["Noah Smith", "Digital Marketing", "October 19, 2026"], ["Chloé Martin", "First Aid Training", "October 19, 2026"], ["Arjun Patel", "Python for Beginners", "October 19, 2026"], ["Sofia Rossi", "Photography 101", "October 19, 2026"], ["Liam O'Brien", "Leadership Workshop", "October 19, 2026"], ["Zhang Min 张敏", "Mandarin Level 2", "October 19, 2026"], ["Emma Johansson", "Creative Writing", "October 19, 2026"]];
+
+  // --- design -------------------------------------------------------------
+  function applyTemplate(name) {
+    S.tpl = name; const t = TEMPLATES[name];
+    S.fields = t.fields.filter((f) => f.kind === "text" || f.col < S.cols.length).map((f) => ({ align: "center", bold: false, ...f }));
+    S.sel = Math.max(0, S.fields.findIndex((f) => f.kind === "col")); renderFields(); draw();
+  }
+  function drawBase(ctx, W, H, k) {
+    const t = TEMPLATES[S.tpl];
+    ctx.fillStyle = t.bg; ctx.fillRect(0, 0, W * k, H * k);
+    if (S.bgImg) { ctx.drawImage(S.bgImg, 0, 0, W * k, H * k); return; }
+    if (t.band) { ctx.fillStyle = t.band; ctx.fillRect(0, 0, 14 * k, H * k); }
+    if (t.top) { ctx.fillStyle = t.top; ctx.fillRect(0, 0, W * k, H * .26 * k); }
+    for (const fr of t.frame || []) { ctx.strokeStyle = fr.c; ctx.lineWidth = fr.w * k; ctx.strokeRect(fr.i * k, fr.i * k, (W - 2 * fr.i) * k, (H - 2 * fr.i) * k); }
+  }
+  function drawText(ctx, f, text, W, H, k) {
+    ctx.font = cssFont(f, f.size * k); ctx.fillStyle = f.color; ctx.textBaseline = "middle"; ctx.textAlign = f.align || "center";
+    ctx.fillText(text, f.x * W * k, f.y * H * k);
+  }
+  function draw() {
+    const cv = $("preview"); if (!cv) return;
+    const [W, H] = pageSize(), k = cv.parentElement.clientWidth / W, dpr = window.devicePixelRatio || 1;
+    cv.style.width = W * k + "px"; cv.style.height = H * k + "px"; cv.width = W * k * dpr; cv.height = H * k * dpr;
+    const ctx = cv.getContext("2d"); ctx.setTransform(dpr, 0, 0, dpr, 0, 0); drawBase(ctx, W, H, k);
+    S.fields.forEach((f, i) => { drawText(ctx, f, val(f, S.row) || (f.kind === "col" ? "[" + S.cols[f.col] + "]" : ""), W, H, k);
+      if (i === S.sel) { ctx.strokeStyle = "#2f6fed"; ctx.setLineDash([4, 3]); ctx.lineWidth = 1; const w = ctx.measureText(val(f, S.row) || "x").width, h = f.size * k * 1.2, ax = f.x * W * k, ay = f.y * H * k;
+        const left = f.align === "left" ? ax : f.align === "right" ? ax - w : ax - w / 2; ctx.strokeRect(left - 4, ay - h / 2, w + 8, h); ctx.setLineDash([]); } });
+    if (!isPro() && S.rows.length) watermarkCanvas(ctx, W * k, H * k);
+    $("rowLabel").textContent = S.rows.length ? "Row " + (S.row + 1) + " of " + S.rows.length : "";
+  }
+  function watermarkCanvas(ctx, w, h) { ctx.save(); ctx.globalAlpha = .13; ctx.fillStyle = "#000"; ctx.font = "700 " + Math.round(w / 22) + "px Arial"; ctx.textAlign = "center"; ctx.translate(w / 2, h / 2); ctx.rotate(-Math.atan2(h, w)); ctx.fillText("FREE PREVIEW · toolkb", 0, 0); ctx.restore(); }
+  function renderFields() {
+    const box = $("fields"); box.innerHTML = "";
+    S.fields.forEach((f, i) => {
+      const d = document.createElement("div"); d.className = "fld" + (i === S.sel ? " on" : "");
+      const src = document.createElement("select"); src.innerHTML = S.cols.map((c, j) => '<option value="c' + j + '">' + c.replace(/</g, "&lt;") + "</option>").join("") + '<option value="t">Fixed text…</option>';
+      src.value = f.kind === "col" ? "c" + f.col : "t";
+      const txt = document.createElement("input"); txt.type = "text"; txt.value = f.text || ""; txt.placeholder = "Text"; txt.hidden = f.kind !== "text";
+      const font = document.createElement("select"); font.innerHTML = '<option value="serif">Serif</option><option value="sans">Sans</option><option value="script">Script</option><option value="mono">Mono</option>'; font.value = f.font;
+      const size = document.createElement("input"); size.type = "number"; size.min = 6; size.max = 120; size.value = f.size; size.title = "Font size";
+      const color = document.createElement("input"); color.type = "color"; color.value = f.color;
+      const align = document.createElement("select"); align.innerHTML = '<option value="left">Left</option><option value="center">Center</option><option value="right">Right</option>'; align.value = f.align;
+      const bold = document.createElement("button"); bold.type = "button"; bold.textContent = "B"; bold.className = "b" + (f.bold ? " on" : "");
+      const del = document.createElement("button"); del.type = "button"; del.textContent = "✕"; del.title = "Remove field";
+      const ctl = document.createElement("div"); ctl.className = "ctl"; [font, size, color, align, bold, del].forEach((e) => ctl.appendChild(e)); [src, txt, ctl].forEach((e) => d.appendChild(e));
+      d.addEventListener("pointerdown", () => { if (S.sel !== i) { S.sel = i; renderFields(); draw(); } });
+      src.onchange = () => { if (src.value === "t") { f.kind = "text"; f.text = f.text || "Your text"; } else { f.kind = "col"; f.col = +src.value.slice(1); } renderFields(); draw(); };
+      txt.oninput = () => { f.text = txt.value; draw(); }; font.onchange = () => { f.font = font.value; draw(); };
+      size.oninput = () => { f.size = Math.max(6, Math.min(120, +size.value || 12)); draw(); }; color.oninput = () => { f.color = color.value; draw(); };
+      align.onchange = () => { f.align = align.value; draw(); }; bold.onclick = () => { f.bold = !f.bold; renderFields(); draw(); };
+      del.onclick = (e) => { e.stopPropagation(); S.fields.splice(i, 1); S.sel = Math.max(0, Math.min(S.sel, S.fields.length - 1)); renderFields(); draw(); };
+      box.appendChild(d);
+    });
+  }
+  function placeAt(ev) {
+    const f = S.fields[S.sel]; if (!f) return; const r = $("preview").getBoundingClientRect();
+    f.x = Math.min(1, Math.max(0, (ev.clientX - r.left) / r.width)); f.y = Math.min(1, Math.max(0, (ev.clientY - r.top) / r.height)); draw();
+  }
+
+  // --- generate -----------------------------------------------------------
+  async function textPng(pdf, f, text) {
+    const c = document.createElement("canvas"), x = c.getContext("2d"); x.font = cssFont(f, f.size * PX);
+    const w = Math.max(1, Math.ceil(x.measureText(text).width)), h = Math.ceil(f.size * PX * 1.4);
+    c.width = w + 8; c.height = h; const y = c.getContext("2d"); y.font = cssFont(f, f.size * PX); y.fillStyle = f.color; y.textBaseline = "middle"; y.fillText(text, 4, h / 2);
+    const img = await pdf.embedPng(await new Promise((r) => c.toBlob((b) => b.arrayBuffer().then(r), "image/png")));
+    return { img, w: c.width / PX, h: h / PX };
+  }
+  async function basePng(pdf, W, H) {
+    const k = 2.5, c = document.createElement("canvas"); c.width = W * k; c.height = H * k; drawBase(c.getContext("2d"), W, H, k);
+    return pdf.embedPng(await new Promise((r) => c.toBlob((b) => b.arrayBuffer().then(r), "image/png")));
+  }
+  async function watermarkPng(pdf, W, H) { const c = document.createElement("canvas"); c.width = W * 2; c.height = H * 2; watermarkCanvas(c.getContext("2d"), W * 2, H * 2); return pdf.embedPng(await new Promise((r) => c.toBlob((b) => b.arrayBuffer().then(r), "image/png"))); }
+  async function buildDoc(rowIdx, pro) {
+    const pdf = await PDFLib.PDFDocument.create(), [W, H] = pageSize();
+    const base = await basePng(pdf, W, H), wm = pro ? null : await watermarkPng(pdf, W, H);
+    for (const r of rowIdx) {
+      const page = pdf.addPage([W, H]); page.drawImage(base, { x: 0, y: 0, width: W, height: H });
+      for (const f of S.fields) { const t = val(f, r); if (!t) continue; const g = await textPng(pdf, f, t);
+        const ax = f.x * W, left = f.align === "left" ? ax - 4 / PX : f.align === "right" ? ax - g.w + 4 / PX : ax - g.w / 2;
+        page.drawImage(g.img, { x: left, y: H - f.y * H - g.h / 2, width: g.w, height: g.h }); }
+      if (wm) page.drawImage(wm, { x: 0, y: 0, width: W, height: H });
+    }
+    return pdf.save();
+  }
+  const safe = (s) => String(s).replace(/[\\/:*?"<>|\n\r]+/g, " ").trim().slice(0, 80) || "document";
+  async function generate() {
+    const pro = isPro(), n = pro ? S.rows.length : Math.min(FREE_ROWS, S.rows.length);
+    const idx = Array.from({ length: n }, (_, i) => i), mode = $("mode").value; $("out").innerHTML = ""; $("gen").disabled = true;
+    try {
+      if (mode === "merged") { msg("Generating " + n + " pages…"); link(new Blob([await buildDoc(idx, pro)], { type: "application/pdf" }), "documents.pdf"); }
+      else { const files = {}, nameCol = +$("nameCol").value, used = {};
+        for (const i of idx) { msg("Generating " + (i + 1) + " / " + n + "…"); let nm = safe(S.rows[i][nameCol]); used[nm] = (used[nm] || 0) + 1; if (used[nm] > 1) nm += " (" + used[nm] + ")"; files[nm + ".pdf"] = await buildDoc([i], pro); }
+        link(new Blob([fflate.zipSync(files, { level: 0 })], { type: "application/zip" }), "documents.zip"); }
+      msg(pro ? "Done: " + n + " documents, no watermark." : "Done: " + n + " of " + S.rows.length + " rows with a watermark (free preview). Unlock to export all rows without watermark.", false, !pro && S.rows.length > n);
+    } catch (e) { msg("Generation failed: " + e.message, true); }
+    $("gen").disabled = false;
+  }
+  function link(blob, name) { const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = name; a.className = "dl"; a.textContent = "Download " + name + " (" + (blob.size / 1048576).toFixed(2) + " MB)"; $("out").appendChild(a); }
+  function msg(t, err, upsell) { const m = $("msg"); m.textContent = t; m.className = "msg" + (err ? " err" : ""); $("upsell").hidden = !upsell; }
+  function updateGenerate() {
+    const pro = isPro(), n = pro ? S.rows.length : Math.min(FREE_ROWS, S.rows.length);
+    $("gen").textContent = pro ? "Generate " + n + " PDFs" : "Generate free preview (" + n + " of " + S.rows.length + ")";
+    $("nameCol").innerHTML = S.cols.map((c, j) => '<option value="' + j + '">' + c.replace(/</g, "&lt;") + "</option>").join("");
+    $("proState").textContent = pro ? "Unlocked: all rows, no watermark." : "Free: first " + FREE_ROWS + " rows with a watermark.";
+  }
+
+  // --- wire up ------------------------------------------------------------
+  $("file").addEventListener("change", (e) => readFile(e.target.files[0]));
+  const dz = $("drop"); ["dragover", "dragenter"].forEach((t) => dz.addEventListener(t, (e) => { e.preventDefault(); dz.classList.add("on"); }));
+  ["dragleave", "drop"].forEach((t) => dz.addEventListener(t, (e) => { e.preventDefault(); dz.classList.remove("on"); }));
+  dz.addEventListener("drop", (e) => readFile(e.dataTransfer.files[0]));
+  $("sample").onclick = () => { setData(SAMPLE); S.sample = true; $("dataInfo").textContent = "Showing sample data (12 rows). Drop your own file above to replace it."; };
+  $("sample").onclick(); msg("This is sample data. Drop your own Excel or CSV above, or edit the design and press Generate to try it.");
+  document.querySelectorAll("[data-tpl]").forEach((b) => b.onclick = () => { S.bgImg = null; document.querySelectorAll("[data-tpl]").forEach((x) => x.classList.toggle("on", x === b)); applyTemplate(b.dataset.tpl); });
+  $("bg").addEventListener("change", async (e) => { const f = e.target.files[0]; if (!f) return; try { S.bgImg = await createImageBitmap(f); S.size = "img"; $("size").value = "img"; draw(); } catch (err) { msg("Background must be a PNG or JPG image.", true); } });
+  $("size").onchange = () => { S.size = $("size").value; draw(); };
+  $("add").onclick = () => { S.fields.push({ kind: S.cols.length ? "col" : "text", col: 0, text: "Your text", x: .5, y: .9, size: 14, font: "sans", color: "#333333", align: "center", bold: false }); S.sel = S.fields.length - 1; renderFields(); draw(); };
+  $("prev").onclick = () => { if (S.row > 0) { S.row--; draw(); } }; $("next").onclick = () => { if (S.row < S.rows.length - 1) { S.row++; draw(); } };
+  let drag = false; const cv = $("preview");
+  cv.addEventListener("pointerdown", (e) => { drag = true; cv.setPointerCapture(e.pointerId); placeAt(e); }); cv.addEventListener("pointermove", (e) => { if (drag) placeAt(e); }); cv.addEventListener("pointerup", () => { drag = false; });
+  $("gen").onclick = generate; window.addEventListener("resize", draw);
+  window.__bulk = { S, setData, generate, buildDoc, applyTemplate }; // used by automated tests
+})();
+</script><script>document.querySelector('[data-tpl].on')&&window.__bulk.applyTemplate(document.querySelector('[data-tpl].on').dataset.tpl);</script></body></html>
