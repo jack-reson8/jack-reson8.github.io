@@ -1,5 +1,5 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Certificate Generator from Excel – Auto-fill Names into Certificates</title><meta name="description" content="Auto-generate certificates from an Excel sheet: map columns like Name, Course and Date onto a template and export every certificate as PDF. Private, fast, no subscription."><link rel="canonical" href="https://jack-reson8.github.io/certificate-generator-from-excel/">
-<meta property="og:title" content="Certificate Generator from Excel – Auto-fill Names into Certificates"><meta property="og:description" content="Auto-generate certificates from an Excel sheet: map columns like Name, Course and Date onto a template and export every certificate as PDF. Private, fast, no subscription."><meta property="og:url" content="https://jack-reson8.github.io/certificate-generator-from-excel/"><meta property="og:type" content="website"><script type="application/ld+json">[{"@context":"https://schema.org","@type":"SoftwareApplication","name":"ToolKB Certificate Generator from Excel","description":"Auto-generate certificates from an Excel sheet: map columns like Name, Course and Date onto a template and export every certificate as PDF. Private, fast, no subscription.","url":"https://jack-reson8.github.io/certificate-generator-from-excel/","applicationCategory":"BusinessApplication","operatingSystem":"Web browser","offers":[{"@type":"Offer","price":"0","priceCurrency":"USD","description":"Free preview: first 10 rows with watermark"},{"@type":"Offer","price":"2.99","priceCurrency":"USD","description":"One batch, unlimited rows, no watermark"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Are my files uploaded anywhere?","acceptedAnswer":{"@type":"Answer","text":"No. Your spreadsheet and background are read and turned into PDFs inside your browser. Nothing is sent to a server, which matters for student and employee lists."}},{"@type":"Question","name":"Which spreadsheet formats work?","acceptedAnswer":{"@type":"Answer","text":"Excel (.xlsx, .xls), CSV and OpenDocument (.ods). The first row is treated as column names."}},{"@type":"Question","name":"Can I use my own certificate design?","acceptedAnswer":{"@type":"Answer","text":"Yes. Export your design (from Canva, Word, Illustrator…) as a PNG or JPG, upload it as the background, then drag the name and other fields into place."}},{"@type":"Question","name":"Do non-English names work?","acceptedAnswer":{"@type":"Answer","text":"Yes. Text is rendered with your system fonts, so Chinese, Japanese, accents and other scripts appear correctly."}},{"@type":"Question","name":"How is this different from Canva Bulk Create?","acceptedAnswer":{"@type":"Answer","text":"No Pro subscription, no 300-row cap, and your data never leaves your device. You pay only for the batches you actually need."}}]}]</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7881768104616342" crossorigin="anonymous"></script><style>:root{--ink:#0f172a;--mut:#64748b;--line:#e2e8f0;--bg:#f8fafc;--acc:#4f46e5;--acc2:#7c3aed;--ok:#059669}
+<meta property="og:title" content="Certificate Generator from Excel – Auto-fill Names into Certificates"><meta property="og:description" content="Auto-generate certificates from an Excel sheet: map columns like Name, Course and Date onto a template and export every certificate as PDF. Private, fast, no subscription."><meta property="og:url" content="https://jack-reson8.github.io/certificate-generator-from-excel/"><meta property="og:type" content="website"><script type="application/ld+json">[{"@context":"https://schema.org","@type":"SoftwareApplication","name":"ToolKB Certificate Generator from Excel","description":"Auto-generate certificates from an Excel sheet: map columns like Name, Course and Date onto a template and export every certificate as PDF. Private, fast, no subscription.","url":"https://jack-reson8.github.io/certificate-generator-from-excel/","applicationCategory":"BusinessApplication","operatingSystem":"Web browser","offers":[{"@type":"Offer","price":"0","priceCurrency":"USD","description":"Free preview: first 10 rows with watermark"},{"@type":"Offer","price":"2.99","priceCurrency":"USD","description":"One batch, unlimited rows, no watermark"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Are my files uploaded anywhere?","acceptedAnswer":{"@type":"Answer","text":"No. Your spreadsheet and background are read and turned into PDFs inside your browser. Nothing is sent to a server, which matters for student and employee lists."}},{"@type":"Question","name":"Which spreadsheet formats work?","acceptedAnswer":{"@type":"Answer","text":"Excel (.xlsx, .xls), CSV and OpenDocument (.ods). The first row is treated as column names."}},{"@type":"Question","name":"Can I use my own certificate design?","acceptedAnswer":{"@type":"Answer","text":"Yes. Export your design (from Canva, Word, Illustrator…) as a PNG or JPG, upload it as the background, then drag the name and other fields into place."}},{"@type":"Question","name":"Do non-English names work?","acceptedAnswer":{"@type":"Answer","text":"Yes. Text is rendered with your system fonts, so Chinese, Japanese, accents and other scripts appear correctly."}},{"@type":"Question","name":"Can I print several labels or badges per sheet?","acceptedAnswer":{"@type":"Answer","text":"Yes. Under Sheet layout pick a standard grid – 30 address labels (Avery 5160 / 8160), 10 business cards (5371), 8 name badges (5395), 21 A4 labels (L7160) or 8 A4 labels (L7165). Print at 100% / actual size, not “fit to page”."}},{"@type":"Question","name":"How is this different from Canva Bulk Create?","acceptedAnswer":{"@type":"Answer","text":"No Pro subscription, no 300-row cap, and your data never leaves your device. You pay only for the batches you actually need."}}]}]</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7881768104616342" crossorigin="anonymous"></script><style>:root{--ink:#0f172a;--mut:#64748b;--line:#e2e8f0;--bg:#f8fafc;--acc:#4f46e5;--acc2:#7c3aed;--ok:#059669}
 *{box-sizing:border-box}body{margin:0;font:16px/1.6 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC",sans-serif;color:var(--ink);background:var(--bg)}
 a{color:var(--acc)}.nav{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.85);backdrop-filter:saturate(1.6) blur(10px);border-bottom:1px solid var(--line)}
 .nav div{max-width:1120px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;font-size:20px;letter-spacing:-.02em;color:var(--ink);text-decoration:none}
@@ -32,18 +32,19 @@ input[type=file]::file-selector-button{border:1px solid #cbd5e1;background:#fff;
   <p class="small" id="dataInfo" style="margin:10px 0 0">No file yet. <button class="btn" id="sample" type="button">Try with sample data</button></p></div>
  <div class="panel" id="step2" hidden><p class="step"><i>2</i>Design</p><div class="tpls"><button type="button" data-tpl="classic" class="">Classic</button><button type="button" data-tpl="modern" class="on">Modern</button><button type="button" data-tpl="badge" class="">Badge</button><button type="button" data-tpl="blank" class="">Blank</button></div>
   <label class="l" for="bg">Or use your own background (PNG / JPG)</label><input class="f" id="bg" type="file" accept="image/png,image/jpeg">
+  <label class="l" for="layout">Sheet layout</label><select class="f" id="layout"><option value="single">One per page</option><optgroup label="US Letter"><option value="l5160">30 address labels – 3×10 (Avery 5160 / 8160)</option><option value="l5371">10 business cards – 2×5 (Avery 5371 / 8371)</option><option value="l5395">8 name badges – 2×4 (Avery 5395 / 8395)</option></optgroup><optgroup label="A4"><option value="l7160">21 labels – 3×7 (Avery L7160)</option><option value="l7165">8 labels – 2×4 (Avery L7165)</option></optgroup></select>
   <label class="l" for="size">Page size</label><select class="f" id="size"><option value="a4l">A4 landscape</option><option value="a4p">A4 portrait</option><option value="ltl">US Letter landscape</option><option value="ltp">US Letter portrait</option><option value="img">Match background image</option></select>
   <label class="l">Fields <span class="small">– click one, then click or drag on the preview to move it</span></label><div id="fields"></div><button class="btn" id="add" type="button">+ Add field</button></div>
  <div class="panel" id="step3" hidden><p class="step"><i>3</i>Generate</p><label class="l" for="mode">Output</label><select class="f" id="mode"><option value="zip">ZIP – one PDF per row</option><option value="merged">One PDF – one page per row</option></select>
-  <label class="l" for="nameCol">Name files by column</label><select class="f" id="nameCol"></select><p class="small" id="proState"></p><button class="btn pri" id="gen" type="button">Generate</button>
+  <label class="l" for="nameCol">Name files by column</label><select class="f" id="nameCol"></select><p class="small" id="sheetNote" hidden>Label sheets export as one PDF. Print at 100% / actual size.</p><p class="small" id="proState"></p><button class="btn pri" id="gen" type="button">Generate</button>
   <div id="msg" class="msg">Load a list to start.</div><div id="out"></div>
   <div class="upsell" id="upsell" hidden><b>Export every row without the watermark</b><span class="small">One batch, unlimited rows – US$2.99, pay once. Card, Alipay or WeChat Pay.</span><br><a href="https://buy.stripe.com/bJedR969x07I2Q9f8QdnW01">Unlock this batch – US$2.99</a></div></div>
 </div><div class="stage"><div class="canvasWrap"><canvas id="preview"></canvas></div><div class="rowbar"><button class="btn" id="prev" type="button">← Prev</button><span id="rowLabel">Load a list or try the sample</span><button class="btn" id="next" type="button">Next →</button></div></div></section>
 <section class="content"><h2>Pricing</h2><div class="price"><div><b>Free</b><p>Preview the first 10 rows as real PDFs, with a small watermark. No signup.</p></div><div><b>US$2.99</b><p>One batch: every row, no watermark. Pay once – no subscription, no account.</p></div></div>
-<h2>Popular uses</h2><ul class="uses"><li>Course &amp; training certificates</li><li>Awards and diplomas</li><li>Event name badges</li><li>Personalised letters and invitations</li><li>Product or shelf labels</li><li>Volunteer &amp; attendance certificates</li></ul>
+<h2>Popular uses</h2><ul class="uses"><li>Course &amp; training certificates</li><li>Awards and diplomas</li><li>Event name badges</li><li>Personalised letters and invitations</li><li>Address labels on Avery sheets</li><li>Product or shelf labels</li><li>Volunteer &amp; attendance certificates</li></ul>
 <h2>How it works</h2><p>1. Upload an Excel, CSV or ODS file – each row becomes one document. 2. Pick a template or upload your own design, then drag the fields where they belong. 3. Generate a ZIP with one PDF per row, or one combined PDF ready to print.</p>
-<h2>FAQ</h2><h3>Are my files uploaded anywhere?</h3><p>No. Your spreadsheet and background are read and turned into PDFs inside your browser. Nothing is sent to a server, which matters for student and employee lists.</p><h3>Which spreadsheet formats work?</h3><p>Excel (.xlsx, .xls), CSV and OpenDocument (.ods). The first row is treated as column names.</p><h3>Can I use my own certificate design?</h3><p>Yes. Export your design (from Canva, Word, Illustrator…) as a PNG or JPG, upload it as the background, then drag the name and other fields into place.</p><h3>Do non-English names work?</h3><p>Yes. Text is rendered with your system fonts, so Chinese, Japanese, accents and other scripts appear correctly.</p><h3>How is this different from Canva Bulk Create?</h3><p>No Pro subscription, no 300-row cap, and your data never leaves your device. You pay only for the batches you actually need.</p>
-<h2>Related</h2><ul class="uses"><li><a href="/bulk-pdf-generator/">Bulk PDF Generator from Excel</a></li><li><a href="/bulk-certificate-generator/">Bulk Certificate Generator</a></li><li><a href="/name-badge-generator/">Name Badge Generator from a List</a></li></ul></section>
+<h2>FAQ</h2><h3>Are my files uploaded anywhere?</h3><p>No. Your spreadsheet and background are read and turned into PDFs inside your browser. Nothing is sent to a server, which matters for student and employee lists.</p><h3>Which spreadsheet formats work?</h3><p>Excel (.xlsx, .xls), CSV and OpenDocument (.ods). The first row is treated as column names.</p><h3>Can I use my own certificate design?</h3><p>Yes. Export your design (from Canva, Word, Illustrator…) as a PNG or JPG, upload it as the background, then drag the name and other fields into place.</p><h3>Do non-English names work?</h3><p>Yes. Text is rendered with your system fonts, so Chinese, Japanese, accents and other scripts appear correctly.</p><h3>Can I print several labels or badges per sheet?</h3><p>Yes. Under Sheet layout pick a standard grid – 30 address labels (Avery 5160 / 8160), 10 business cards (5371), 8 name badges (5395), 21 A4 labels (L7160) or 8 A4 labels (L7165). Print at 100% / actual size, not “fit to page”.</p><h3>How is this different from Canva Bulk Create?</h3><p>No Pro subscription, no 300-row cap, and your data never leaves your device. You pay only for the batches you actually need.</p>
+<h2>Related</h2><ul class="uses"><li><a href="/bulk-pdf-generator/">Bulk PDF Generator from Excel</a></li><li><a href="/bulk-certificate-generator/">Bulk Certificate Generator</a></li><li><a href="/name-badge-generator/">Name Badge Generator from a List</a></li><li><a href="/print-labels-from-excel/">Print Labels from Excel</a></li></ul></section>
 <footer>ToolKB – professional file tools, pay per job. Everything runs in your browser.</footer>
 <script src="/vendor/xlsx.full.min.js"></script><script src="/vendor/pdf-lib.min.js"></script><script src="/vendor/fflate.min.js"></script>
 <script>// ToolKB bulk PDF generator: spreadsheet rows -> personalised PDF pages. Runs entirely in the browser.
@@ -51,6 +52,14 @@ input[type=file]::file-selector-button{border:1px solid #cbd5e1;background:#fff;
   const $ = (id) => document.getElementById(id);
   const FREE_ROWS = 10, PX = 4; // free tier row cap; text raster scale (px per pt)
   const SIZES = { a4l: [842, 595], a4p: [595, 842], ltl: [792, 612], ltp: [612, 792] };
+  // Multi-up label sheets (points): page, grid, cell size, left/top margin, horizontal/vertical gap. Pitches match the common Avery layouts.
+  const LAYOUTS = {
+    l5160: { page: [612, 792], cols: 3, rows: 10, cell: [189, 72], m: [13.5, 36], gap: [9, 0], tpl: "label" },
+    l5371: { page: [612, 792], cols: 2, rows: 5, cell: [252, 144], m: [54, 36], gap: [0, 0] },
+    l5395: { page: [612, 792], cols: 2, rows: 4, cell: [243, 168], m: [49.5, 42], gap: [27, 12] },
+    l7160: { page: [595.28, 841.89], cols: 3, rows: 7, cell: [180, 108], m: [20.55, 42.95], gap: [7.09, 0], tpl: "label" },
+    l7165: { page: [595.28, 841.89], cols: 2, rows: 4, cell: [280.9, 191.9], m: [13.2, 37.1], gap: [7.1, 0] },
+  };
   const FONTS = { serif: "Georgia,'Times New Roman','Songti SC',serif", sans: "'Helvetica Neue',Arial,'PingFang SC','Microsoft YaHei',sans-serif", script: "'Snell Roundhand','Brush Script MT','Segoe Script',cursive", mono: "'Courier New',monospace" };
   const TEMPLATES = {
     classic: { bg: "#fffdf7", frame: [{ i: 18, w: 6, c: "#1f3a5f" }, { i: 30, w: 1.5, c: "#c9a24b" }], fields: [
@@ -65,15 +74,21 @@ input[type=file]::file-selector-button{border:1px solid #cbd5e1;background:#fff;
       { kind: "col", col: 0, x: .08, y: .5, size: 42, font: "sans", color: "#2f6fed", bold: true, align: "left" },
       { kind: "col", col: 1, x: .08, y: .64, size: 16, font: "sans", color: "#374151", align: "left" },
       { kind: "col", col: 2, x: .08, y: .82, size: 12, font: "sans", color: "#9ca3af", align: "left" }] },
-    badge: { bg: "#ffffff", frame: [{ i: 10, w: 2, c: "#d1d5db" }], top: "#111827", fields: [
+    badge: { bg: "#ffffff", ref: 595, frame: [{ i: 10, w: 2, c: "#d1d5db" }], top: "#111827", fields: [
       { kind: "text", text: "HELLO, MY NAME IS", x: .5, y: .13, size: 22, font: "sans", color: "#ffffff", bold: true },
       { kind: "col", col: 0, x: .5, y: .52, size: 54, font: "sans", color: "#111827", bold: true },
       { kind: "col", col: 1, x: .5, y: .72, size: 22, font: "sans", color: "#4b5563" }] },
+    label: { bg: "#ffffff", ref: 189, fields: [
+      { kind: "col", col: 0, x: .07, y: .28, size: 12, font: "sans", color: "#111111", bold: true, align: "left" },
+      { kind: "col", col: 1, x: .07, y: .53, size: 10, font: "sans", color: "#222222", align: "left" },
+      { kind: "col", col: 2, x: .07, y: .77, size: 10, font: "sans", color: "#222222", align: "left" }] },
     blank: { bg: "#ffffff", fields: [{ kind: "col", col: 0, x: .5, y: .5, size: 36, font: "sans", color: "#111111" }] },
   };
-  const S = { cols: [], rows: [], tpl: "classic", size: "a4l", bgImg: null, bgBytes: null, bgType: "", fields: [], sel: 0, row: 0 };
+  const S = { cols: [], rows: [], tpl: "classic", size: "a4l", layout: "single", bgImg: null, bgBytes: null, bgType: "", fields: [], sel: 0, row: 0 };
   const isPro = () => { try { return Number(localStorage.getItem("pro_until") || 0) > Date.now(); } catch (e) { return false; } };
-  const pageSize = () => (S.size === "img" && S.bgImg ? [842, Math.round(842 * S.bgImg.height / S.bgImg.width)] : SIZES[S.size] || SIZES.a4l);
+  const sheet = () => LAYOUTS[S.layout] || null;
+  // pageSize() is the design size: one label cell on a multi-up sheet, otherwise the whole page.
+  const pageSize = () => (sheet() ? sheet().cell : S.size === "img" && S.bgImg ? [842, Math.round(842 * S.bgImg.height / S.bgImg.width)] : SIZES[S.size] || SIZES.a4l);
   const val = (f, r) => (f.kind === "text" ? f.text : String((S.rows[r] || [])[f.col] == null ? "" : S.rows[r][f.col]));
   const cssFont = (f, size) => (f.bold ? "700 " : "400 ") + size + "px " + FONTS[f.font];
 
@@ -99,17 +114,17 @@ input[type=file]::file-selector-button{border:1px solid #cbd5e1;background:#fff;
 
   // --- design -------------------------------------------------------------
   function applyTemplate(name) {
-    S.tpl = name; const t = TEMPLATES[name];
-    S.fields = t.fields.filter((f) => f.kind === "text" || f.col < S.cols.length).map((f) => ({ align: "center", bold: false, ...f }));
+    S.tpl = name; const t = TEMPLATES[name], k = sheet() ? pageSize()[0] / (t.ref || 842) : 1; // template sizes are in points for a full page (or ref width)
+    S.fields = t.fields.filter((f) => f.kind === "text" || f.col < S.cols.length).map((f) => ({ align: "center", bold: false, ...f, size: Math.max(6, Math.round(f.size * k)) }));
     S.sel = Math.max(0, S.fields.findIndex((f) => f.kind === "col")); renderFields(); draw();
   }
   function drawBase(ctx, W, H, k) {
-    const t = TEMPLATES[S.tpl];
+    const t = TEMPLATES[S.tpl], s = Math.min(1, Math.min(W, H) / 595);
     ctx.fillStyle = t.bg; ctx.fillRect(0, 0, W * k, H * k);
     if (S.bgImg) { ctx.drawImage(S.bgImg, 0, 0, W * k, H * k); return; }
-    if (t.band) { ctx.fillStyle = t.band; ctx.fillRect(0, 0, 14 * k, H * k); }
+    if (t.band) { ctx.fillStyle = t.band; ctx.fillRect(0, 0, 14 * s * k, H * k); }
     if (t.top) { ctx.fillStyle = t.top; ctx.fillRect(0, 0, W * k, H * .26 * k); }
-    for (const fr of t.frame || []) { ctx.strokeStyle = fr.c; ctx.lineWidth = fr.w * k; ctx.strokeRect(fr.i * k, fr.i * k, (W - 2 * fr.i) * k, (H - 2 * fr.i) * k); }
+    for (const fr of t.frame || []) { const i = fr.i * s; ctx.strokeStyle = fr.c; ctx.lineWidth = fr.w * s * k; ctx.strokeRect(i * k, i * k, (W - 2 * i) * k, (H - 2 * i) * k); }
   }
   function drawText(ctx, f, text, W, H, k) {
     ctx.font = cssFont(f, f.size * k); ctx.fillStyle = f.color; ctx.textBaseline = "middle"; ctx.textAlign = f.align || "center";
@@ -168,24 +183,32 @@ input[type=file]::file-selector-button{border:1px solid #cbd5e1;background:#fff;
     return pdf.embedPng(await new Promise((r) => c.toBlob((b) => b.arrayBuffer().then(r), "image/png")));
   }
   async function watermarkPng(pdf, W, H) { const c = document.createElement("canvas"); c.width = W * 2; c.height = H * 2; watermarkCanvas(c.getContext("2d"), W * 2, H * 2); return pdf.embedPng(await new Promise((r) => c.toBlob((b) => b.arrayBuffer().then(r), "image/png"))); }
+  // Draws one row's design with its bottom-left corner at (ox, oy) in PDF points.
+  async function drawCell(pdf, page, base, wm, r, ox, oy, W, H) {
+    page.drawImage(base, { x: ox, y: oy, width: W, height: H });
+    for (const f of S.fields) { const t = val(f, r); if (!t) continue; const g = await textPng(pdf, f, t);
+      const ax = f.x * W, left = f.align === "left" ? ax - 4 / PX : f.align === "right" ? ax - g.w + 4 / PX : ax - g.w / 2;
+      page.drawImage(g.img, { x: ox + left, y: oy + H - f.y * H - g.h / 2, width: g.w, height: g.h }); }
+    if (wm) page.drawImage(wm, { x: ox, y: oy, width: W, height: H });
+  }
   async function buildDoc(rowIdx, pro) {
-    const pdf = await PDFLib.PDFDocument.create(), [W, H] = pageSize();
+    const pdf = await PDFLib.PDFDocument.create(), [W, H] = pageSize(), L = sheet();
     const base = await basePng(pdf, W, H), wm = pro ? null : await watermarkPng(pdf, W, H);
-    for (const r of rowIdx) {
-      const page = pdf.addPage([W, H]); page.drawImage(base, { x: 0, y: 0, width: W, height: H });
-      for (const f of S.fields) { const t = val(f, r); if (!t) continue; const g = await textPng(pdf, f, t);
-        const ax = f.x * W, left = f.align === "left" ? ax - 4 / PX : f.align === "right" ? ax - g.w + 4 / PX : ax - g.w / 2;
-        page.drawImage(g.img, { x: left, y: H - f.y * H - g.h / 2, width: g.w, height: g.h }); }
-      if (wm) page.drawImage(wm, { x: 0, y: 0, width: W, height: H });
+    if (!L) { for (const r of rowIdx) await drawCell(pdf, pdf.addPage([W, H]), base, wm, r, 0, 0, W, H); return pdf.save(); }
+    const per = L.cols * L.rows; let page;
+    for (let j = 0; j < rowIdx.length; j++) {
+      const n = j % per, c = n % L.cols, rr = Math.floor(n / L.cols); if (!n) page = pdf.addPage(L.page);
+      const top = L.m[1] + rr * (L.cell[1] + L.gap[1]);
+      await drawCell(pdf, page, base, wm, rowIdx[j], L.m[0] + c * (L.cell[0] + L.gap[0]), L.page[1] - top - H, W, H);
     }
     return pdf.save();
   }
   const safe = (s) => String(s).replace(/[\\/:*?"<>|\n\r]+/g, " ").trim().slice(0, 80) || "document";
   async function generate() {
     const pro = isPro(), n = pro ? S.rows.length : Math.min(FREE_ROWS, S.rows.length);
-    const idx = Array.from({ length: n }, (_, i) => i), mode = $("mode").value; $("out").innerHTML = ""; $("gen").disabled = true;
+    const idx = Array.from({ length: n }, (_, i) => i), mode = sheet() ? "merged" : $("mode").value; $("out").innerHTML = ""; $("gen").disabled = true;
     try {
-      if (mode === "merged") { msg("Generating " + n + " pages…"); link(new Blob([await buildDoc(idx, pro)], { type: "application/pdf" }), "documents.pdf"); }
+      if (mode === "merged") { msg("Generating " + n + " pages…"); link(new Blob([await buildDoc(idx, pro)], { type: "application/pdf" }), sheet() ? "labels.pdf" : "documents.pdf"); }
       else { const files = {}, nameCol = +$("nameCol").value, used = {};
         for (const i of idx) { msg("Generating " + (i + 1) + " / " + n + "…"); let nm = safe(S.rows[i][nameCol]); used[nm] = (used[nm] || 0) + 1; if (used[nm] > 1) nm += " (" + used[nm] + ")"; files[nm + ".pdf"] = await buildDoc([i], pro); }
         link(new Blob([fflate.zipSync(files, { level: 0 })], { type: "application/zip" }), "documents.zip"); }
@@ -197,7 +220,9 @@ input[type=file]::file-selector-button{border:1px solid #cbd5e1;background:#fff;
   function msg(t, err, upsell) { const m = $("msg"); m.textContent = t; m.className = "msg" + (err ? " err" : ""); $("upsell").hidden = !upsell; }
   function updateGenerate() {
     const pro = isPro(), n = pro ? S.rows.length : Math.min(FREE_ROWS, S.rows.length);
-    $("gen").textContent = pro ? "Generate " + n + " PDFs" : "Generate free preview (" + n + " of " + S.rows.length + ")";
+    const L = sheet(), sheets = L ? " on " + Math.ceil(n / (L.cols * L.rows)) + " sheet" + (n > L.cols * L.rows ? "s" : "") : "";
+    $("gen").textContent = pro ? "Generate " + n + (L ? " labels" + sheets : " PDFs") : "Generate free preview (" + n + " of " + S.rows.length + sheets + ")";
+    $("mode").disabled = $("nameCol").disabled = !!L; $("size").disabled = !!L; $("sheetNote").hidden = !L;
     $("nameCol").innerHTML = S.cols.map((c, j) => '<option value="' + j + '">' + c.replace(/</g, "&lt;") + "</option>").join("");
     $("proState").textContent = pro ? "Unlocked: all rows, no watermark." : "Free: first " + FREE_ROWS + " rows with a watermark.";
   }
@@ -212,11 +237,19 @@ input[type=file]::file-selector-button{border:1px solid #cbd5e1;background:#fff;
   document.querySelectorAll("[data-tpl]").forEach((b) => b.onclick = () => { S.bgImg = null; document.querySelectorAll("[data-tpl]").forEach((x) => x.classList.toggle("on", x === b)); applyTemplate(b.dataset.tpl); });
   $("bg").addEventListener("change", async (e) => { const f = e.target.files[0]; if (!f) return; try { S.bgImg = await createImageBitmap(f); S.size = "img"; $("size").value = "img"; draw(); } catch (err) { msg("Background must be a PNG or JPG image.", true); } });
   $("size").onchange = () => { S.size = $("size").value; draw(); };
+  // Switching layout keeps the design proportional: label layouts with their own template get it, others scale font sizes to the new cell height.
+  function setLayout(name) {
+    const W0 = pageSize()[0]; S.layout = LAYOUTS[name] ? name : "single"; const L = sheet(), tpl = L ? L.tpl : S.tpl === "label" && "classic";
+    if (tpl && !S.bgImg) { document.querySelectorAll("[data-tpl]").forEach((x) => x.classList.toggle("on", x.dataset.tpl === tpl)); applyTemplate(tpl); }
+    else { const k = pageSize()[0] / W0; S.fields.forEach((f) => { f.size = Math.max(6, Math.min(120, Math.round(f.size * k))); }); renderFields(); draw(); }
+    $("layout").value = S.layout; updateGenerate();
+  }
+  $("layout").onchange = () => setLayout($("layout").value);
   $("add").onclick = () => { S.fields.push({ kind: S.cols.length ? "col" : "text", col: 0, text: "Your text", x: .5, y: .9, size: 14, font: "sans", color: "#333333", align: "center", bold: false }); S.sel = S.fields.length - 1; renderFields(); draw(); };
   $("prev").onclick = () => { if (S.row > 0) { S.row--; draw(); } }; $("next").onclick = () => { if (S.row < S.rows.length - 1) { S.row++; draw(); } };
   let drag = false; const cv = $("preview");
   cv.addEventListener("pointerdown", (e) => { drag = true; cv.setPointerCapture(e.pointerId); placeAt(e); }); cv.addEventListener("pointermove", (e) => { if (drag) placeAt(e); }); cv.addEventListener("pointerup", () => { drag = false; });
   $("gen").onclick = generate; window.addEventListener("resize", draw);
-  window.__bulk = { S, setData, generate, buildDoc, applyTemplate }; // used by automated tests
+  window.__bulk = { S, setData, generate, buildDoc, applyTemplate, setLayout, LAYOUTS }; // used by automated tests
 })();
 </script><script>document.querySelector('[data-tpl].on')&&window.__bulk.applyTemplate(document.querySelector('[data-tpl].on').dataset.tpl);</script></body></html>
